@@ -2,3 +2,15 @@
 # которая найдёт сумму элементов списка, стоящих на нечётной позиции.
 # Пример:
 # - [2, 3, 5, 9, 3] -> на нечётных позициях элементы 3 и 9, ответ: 12
+import random
+
+n = int(input("Введите размер массива: "))
+array = []
+for i in range(n):
+    array.append(random.randint(0, 100))
+print(array)
+sum = 0
+for i in range(1, n, 2):
+    sum = sum + array[i]
+
+print(f'Сумма элементов с нечётным индексом равна: ', sum)
